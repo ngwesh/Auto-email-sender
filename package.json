@@ -2,7 +2,7 @@
   "name": "auto-email-sender",
   "version": "1.0.0",
   "description": "Sends automatic emails",
-  "main": "index.js",
+  "main": "server.js",
   "engines": {
     "node": "^22"
   },
