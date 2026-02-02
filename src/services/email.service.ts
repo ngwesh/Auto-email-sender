@@ -13,7 +13,7 @@ export const sendEmail = async (options: EmailOptions) => {
   try {
     const msg: any = {
       to: options.to,
-      from: process.env.FROM_EMAIL,
+      from: process.env.FROM_EMAIL as string,
       subject: options.subject,
       text: options.text,
       html: options.html,
