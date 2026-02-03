@@ -2,11 +2,14 @@
   "name": "auto-email-sender",
   "version": "1.0.0",
   "description": "Sends automatic emails",
-  "main": "index.js",
+  "main": "dist/server.js",
+  "engines": {
+    "node": "^22"
+  },
   "scripts": {
-  "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-  "build": "tsc",
-  "start": "node dist/server.js",
+    "dev": "nodemon",
+    "build": "tsc",
+    "start": "node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,9 +23,18 @@
   },
   "homepage": "https://github.com/ngwesh/Auto-email-sender#readme",
   "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/dotenv": "^6.1.1",
     "@types/express": "^5.0.6",
     "@types/node": "^25.2.0",
+    "nodemon": "^3.1.11",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.6",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1"
   }
 }
